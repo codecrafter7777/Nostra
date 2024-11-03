@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* top offer bar */
+.offer{
+    background-color:#6D7365;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    color: #1D232C;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 10;
+}
+
+.navbar h1{
+    color:black;
+}
+
+.navbar-options{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+}
+
+.navbar-option a{
+    text-decoration: none;
+    color: #1D232C;
+}
+
+
+.navbar-option a:hover{
+    color: #97575F;
+    text-decoration: underline;
+
+}
+
+.navbar-menu-toggle{
+    display: none;
+}
+
+/* ms Navbar */
+
+.side-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #9EB1A9;
+    color: #E2E1E1;
+    margin-left: -60%;
+    transition-duration: 1s;
+    z-index: 10;
+    padding: 20px;
+  
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: #E2E1E1;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+    color: #E2E1E1;
+}
+
+.side-navbar-search {
+    border: solid #E2E1E1 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.side-navbar-search input {
+    border: none;
+    background: transparent;
+}
+
+
+/* slider */
+
+.slider{
+
+    
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    position: relative;
+    
+    border-radius: 5px;
+
+}
+
+.slider-images{
+    display: flex;
+    transition: 2s;
+}
+.slider-image{
+    width: 100vw;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for darkness */
+    z-index: 1; /* Make sure the overlay is above the image */
+}
+
+
+.slider-left-button{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    z-index: 4;
+}
+
+.slider-left-button i{
+    font-size: 5vw;
+    cursor: pointer;
+    
+}
+
+.slider-right-button{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    z-index: 3;
+}
+.slider-right-button i{
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.slider-text{
+    position: absolute;
+    color: white;
+    text-align: center;
+     width: 100%;
+     top: 20%;
+     z-index: 3;
+}
+
+.slider-text h1{
+    font-size: 5vw;
+}
+
+.slider-text button{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    color: #1D232C;
+    cursor: pointer;
+
+ }
+
+ .slider-text button:hover{
+    background-color: #6D7365;
+    color: white;
+    border: solid #1D232C ; 
+}
+
+ /* Brands */
+
+ .brands-container{
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+    justify-content: space-between;
+    margin: 2vw;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.brand-image{
+    width: 10vw;
+    align-items: center;
+
+}
+/* 
+service */
+
+.service1
+{
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+/* Services */
+
+.service2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw;
+    font-size: 1vw;
+}
+
+/* .service2 div{
+    background-color: #d6e5de;
+    width: 20%;
+    margin: 0.5vw;
+    padding: 1vw;
+    border-radius: 5px;
+    
+
+} */
+
+.service2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw;
+    font-size: 1vw;
+}
+
+.service2 div {
+    background-color: #d6e5de;
+    width: 20%;
+    margin: 0.5vw;
+    padding: 1vw;
+    border-radius: 5px;
+    position: relative; /* Required for absolute positioning of the shine effect */
+    overflow: hidden; /* Ensure the shine effect does not overflow the box */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.service2 div::before {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute;
+    top: -50%; /* Start above the box */
+    left: -50%; /* Start from the left */
+    width: 200%; /* Cover the entire width */
+    height: 200%; /* Cover the entire height */
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); /* Create a shine effect */
+    transition: top 0.3s ease; /* Smooth movement for the shine */
+    opacity: 0; /* Start invisible */
+}
+
+.service2 div:hover::before {
+    top: 0; /* Move shine effect to cover the box */
+    opacity: 1; /* Make it visible */
+}
+
+.service2 div:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+
+
+/* New Arrivals */
+
+/* .new-arrival-container{
+    display: flex;
+    height: 20vw;
+    justify-content: space-between;
+    margin-top: 2vw;
+    margin: 1vw;
+    background-color:  #D0959F;
+    padding: 2%;
+    
+}
+
+.new-arrival{
+    position: relative;
+
+
+}
+
+.new-arrival img{
+    border-radius: 4px;
+    border-radius: 2%;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.overlay{
+    border-radius: 2%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 2;
+    top: 0;
+    opacity: 0.6;
+    
+}
+
+.new-arrival button{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: #1D232C;
+    border-radius: 10px;
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 18%;
+    z-index: 2;
+    
+    
+} */
+
+.new-arrival-container {
+    display: flex;
+    height: 20vw; /* Adjust height based on design */
+    justify-content: space-between;
+    margin: 2vw 1vw; /* Combined margin for cleaner code */
+    background-color: #D0959F; /* Container background */
+    padding: 2%;
+    overflow: hidden; /* Ensures child elements don't overflow */
+}
+
+.new-arrival {
+
+    position: relative;
+    flex: 1; /* Allow items to flex and fill space */
+    margin: 0 1%; /* Margin between items */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.new-arrival:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+.new-arrival img {
+    border-radius: 2%; /* Keep consistent border radius */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 2;
+    top: 0;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.new-arrival:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.new-arrival button {
+    padding: 5% ; /* Adjusted padding for symmetry */
+    font-size: 1.2vw;
+    color: #1D232C;
+    border-radius: 10px;
+    position: absolute;
+    border: none;
+    top: 50%;
+    left: 50%; /* Center button */
+    transform: translate(-50%, -50%); /* Centering with transform */
+    z-index: 3; /* Ensure button is above overlay */
+    background-color: #fff; /* Optional: white background for button */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.new-arrival button:hover {
+    background-color: #9EB1A9 ;
+    color: white;
+}
+
+
+/* Most wanted */
+
+.most-wanted-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+    overflow-x: scroll;
+    gap: 8vw;
+   
+}
+
+.most-wanted-container img{
+    border-radius: 2%;
+    width: 15vw;
+
+}
+
+
+.most-wanted{
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.most-wanted p{
+    position: absolute;
+    top:3px;
+    left: 3px;
+    font-size: 2vw;
+    background-color: red;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10%;
+
+}
+
+#mw:hover{
+    cursor: pointer;
+    opacity: 0.5;
+
+}
+
+.like{
+    position: absolute;
+    width: 15%;
+    bottom: 12%;
+    right: 5%;
+}
+
+/* Limited Offer */
+
+.limited-offer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+    align-items: center;
+    background-color: #6D7365;
+    color: #E2E1E1;
+    padding: 20px;
+    font-size: 2vw;
+}
+
+.limited-offer img{
+    width: 80%;
+    height:100%;
+}
+
+.limited-offer-text{
+    padding: 5%;
+}
+
+.limited-offer button{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: #1D232C;
+    border-radius: 10px;
+    border: solid white;
+ 
+    
+ }
+
+ .limited-offer button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: solid white;
+
+ }
+/* 
+ news letter */
+
+
+ .news-letter{
+    color: #9EB1A9;
+    font-size: 2vw;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-letter input{
+    padding: 11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid #9EB1A9 3px;
+
+}
+
+.news-letter input:focus{
+   outline: none;
+
+}
+
+.news-letter button{
+    
+    margin-top: 10px;
+    font-size: 1.8vw;
+    color: #E2E1E1;
+    background-color: #9EB1A9;
+    border-radius: 10px;
+    border: none;
+    padding:10px;
+    border: solid #9EB1A9 1px;
+
+}
+    
+.news-letter button:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color: #9EB1A9;
+    border: solid #9EB1A9 1px;
+    }
+    
+
+ 
+
+ /* Footer */
+
+ .footer{
+    background-color: #6D7365;
+    color: white;
+    font-size: 2vw;
+    margin-top: 5vw;
+    padding: 40px;
+ }
+
+ .footer-icons{
+    padding: 1vw;
+    margin-top: 2vw;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+ }
+
+
+
+/* Show the menu toggle on smaller screens */
+@media (max-width: 1000px) {
+    .navbar-menu-toggle {
+        display: block; /* Show the menu toggle */
+}
+
+    .navbar-options {
+        display: none; /* Hide the navbar options on small screens */
+    }
+
+    .navbar-options.active {
+        display: block; /* Show navbar options when active */
+        /* You may want to add additional styling for visibility */
+}
+}
+
+
+
